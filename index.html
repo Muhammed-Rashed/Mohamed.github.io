@@ -1,0 +1,387 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <!--=============== REMIX ICONS ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css" rel="stylesheet">
+
+  <!--=============== CSS ===============-->
+  <link rel="stylesheet" href="../../static/CSS/styles.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+  <title>Mohamed Rashid - Portfolio</title>
+</head>
+<body>
+
+<!--==================== HEADER ====================-->
+<header class="header" id="header">
+    <nav>
+        <ul id="navBar">
+            <li id="pages">
+                <a href="#about-me" id="about-link">
+                    <i class="ri-user-2-line"></i>
+                    About Me
+                </a>
+                <a href="#technical-skill" id="technical-link">
+                    <i class="ri-briefcase-5-line"></i>
+                    Technical Skills
+                </a>
+                <a href="#projects" id="projects-link">
+                    <i class="ri-book-shelf-line"></i>
+                    Projects
+                </a>
+                <a href="#contact-me" id="contact-link">
+                    <i class="ri-phone-line"></i>
+                    Contact Me
+                </a>
+                <button id="theme-toggle" title="Toggle theme">
+                    <i id="theme-icon" class="ri-moon-line"></i>
+                </button>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<!--==================== MAIN ====================-->
+<main class="main">
+    <!--==================== About-me ====================-->
+    <section class="about section fade-in" id="about-me">
+        <div class="container">
+            <div class="portfolio__container">
+                <!-- Left Side (Summary + Education) -->
+                <div class="left-panel">
+                    <!-- Name and Description -->
+                    <div class="name-title">
+                        <h2>Hi I'm Mohamed Rashid</h2>
+                        <h3>Software, Game, and Web Developer</h3>
+                        <div class="description">
+                            <p>
+                                Passionate developer with expertise in creating interactive web applications,
+                                innovative software solutions, and engaging game experiences.
+                                I specialize in building responsive and user-friendly interfaces
+                                that deliver exceptional user experiences.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Why Me Section -->
+                    <div class="why-section">
+                        <h2>Why Me?</h2>
+                        <h3>I'm a fast learner who thrives on picking up new technologies and applying them effectively.</h3>
+                        <div class="why-description">
+                            <p>
+                                I take initiative, figure things out, and get things done. Whether it's something I already know or something
+                                I need to learn, I always make sure to deliver exactly what's needed, when it's needed. Wherever I've worked or studied,
+                                people appreciate having me on their team — and so will you.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Side (Profile Image) -->
+                <div class="right-panel">
+                    <div class="circle-container">
+                        <img src="/base/static/images/Portfolio.jpg" alt="Mohamed Rashid" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Resume Button -->
+            <div class="resume-button" align= "center">
+                <a href="resume.docx" download>
+                    <button class="blue-button">
+                        <span>Download Resume</span>
+                    </button>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!--==================== Technical ====================-->
+    <section class="technical-skill section" id="technical-skill">
+        <div class="container">
+            <!-- Section title -->
+            <h2 class="section__title">Technical skills</h2>
+            <div class="categories-grid">
+                <!-- Programming Languages -->
+                <div class="category-container">
+                    <h3 class="category-title">Programming Languages</h3>
+                    <div class="skills-grid">
+                        {% for technical in technicals %}
+                        {% if technical.category == 'programming' %}
+                        <div class="skill-circle">
+                            {% if technical.image %}
+                            <img src="{{ technical.image.url }}" alt="{{ technical.title }}">
+                            {% else %}
+                            <div class="skill-text">{{ technical.title }}</div>
+                            {% endif %}
+                            <div class="tooltip">{{ technical.title }} - {{ technical.subtitle }}</div>
+                        </div>
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+                <!-- Frameworks and Libraries -->
+                <div class="category-container">
+                    <h3 class="category-title">Frameworks & Libraries</h3>
+                    <div class="skills-grid">
+                        {% for technical in technicals %}
+                        {% if technical.category == 'framework' %}
+                        <div class="skill-circle">
+                            {% if technical.image %}
+                            <img src="{{ technical.image.url }}" alt="{{ technical.title }}">
+                            {% else %}
+                            <div class="skill-text">{{ technical.title }}</div>
+                            {% endif %}
+                            <div class="tooltip">{{ technical.title }} - {{ technical.subtitle }}</div>
+                        </div>
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <!-- Databases -->
+                <div class="category-container">
+                    <h3 class="category-title">Databases</h3>
+                    <div class="skills-grid">
+                        {% for technical in technicals %}
+                        {% if technical.category == 'database' %}
+                        <div class="skill-circle">
+                            {% if technical.image %}
+                            <img src="{{ technical.image.url }}" alt="{{ technical.title }}">
+                            {% else %}
+                            <div class="skill-text">{{ technical.title }}</div>
+                            {% endif %}
+                            <div class="tooltip">{{ technical.title }} - {{ technical.subtitle }}</div>
+                        </div>
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <!-- Others -->
+                <div class="category-container">
+                    <h3 class="category-title">Others</h3>
+                    <div class="skills-grid">
+                        {% for technical in technicals %}
+                        {% if technical.category == 'other' %}
+                        <div class="skill-circle">
+                            {% if technical.image %}
+                            <img src="{{ technical.image.url }}" alt="{{ technical.title }}">
+                            {% else %}
+                            <div class="skill-text">{{ technical.title }}</div>
+                            {% endif %}
+                            <div class="tooltip">{{ technical.title }} - {{ technical.subtitle }}</div>
+                        </div>
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--==================== Projects ====================-->
+    <section class="projects section" id="projects">
+        <div class="container">
+            <!-- Section title -->
+            <h2 class="section__title">My Best Projects</h2>
+
+            <!-- Search & Filter -->
+            <div class="box">
+                <i class='bx bx-search'></i>
+                <input type="text" id="searchInput" placeholder="Search">
+                <div class="filter">
+                    <i id="filterIcon" class="ri-filter-3-line"></i>
+                    <div id="filterMenu" class="filter-menu" style="display: none;">
+                        <div data-filter-type="category">Category</div>
+                        <div data-filter-type="status">Status</div>
+                        <div data-filter-type="tech">Tech Stack</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filter Popup -->
+            <div id="filterPopup" class="popup" style="display: none;">
+                <span id="closePopup">&times;</span>
+                <label id="filterLabel"></label>
+                <input type="text" id="popupInput" style="display:none;">
+                <select id="popupSelect" style="display:none;">
+                    <option value="">--Select--</option>
+                    <option value="software">Software</option>
+                    <option value="web">Web</option>
+                    <option value="game">Game</option>
+                    <option value="finished">Finished</option>
+                    <option value="not_finished">Not Finished</option>
+                </select>
+                <button id="applyFilter">Apply</button>
+            </div>
+            <div id="clearFilter" class="clear-filter">Clear Filter</div>
+
+            {% for category, label in grouped_categories %}
+            <h3 class="project-group-title">{{ label }}</h3>
+            <div class="projects__menu">
+                {% for project in projects %}
+                {% if project.category == category %}
+                <div class="project-card" data-title="{{ project.title|lower }}" data-status="{{ project.status }}" data-tech="{{ project.tech_stack|lower }}" data-category="{{ project.category }}">
+                    <div class="carousel-inner">
+                        <img src="{{ project.thumbnail.url }}" alt="Project Screenshot for {{ project.title }}" />
+                    </div>
+                    <div class="project-overlay">
+                        <div class="project-header">
+                            <div class="left">
+                                <h3>{{ project.title }}</h3>
+                                <p class="author">{{ project.subtitle }}</p>
+                                <h4>{{ project.tech_stack }}</h4>
+                            </div>
+                            <div class="right">
+                                <span class="status {{ project.status }}">{{ project.get_status_display }}</span>
+                                <span class="category">{{ project.get_category_display }}</span>
+                            </div>
+                        </div>
+                        <div class="project-actions" style="flex-direction: column; align-items: center;">
+                            {% if project.download_link %}
+                            <a href="{{ project.download_link.url }}" download class="action-button green-button">
+                                <i class="fas fa-download"></i> Download
+                            </a>
+                            {% endif %}
+                            {% if project.link_type == "github" and project.link_url %}
+                            <a href="{{ project.link_url }}" target="_blank" class="action-button gray-button">
+                                <i class="fab fa-github"></i> View on GitHub
+                            </a>
+                            {% elif project.link_type == "website" and project.link_url %}
+                            <a href="{{ project.link_url }}" target="_blank" class="action-button blue-button">
+                                <i class="fas fa-globe"></i> Visit Website
+                            </a>
+                            {% endif %}
+                            {% if not project.download_link and not project.link_url %}
+                            <span class="action-button red-button" style="pointer-events: none; opacity: 0.6;">
+                            <i class="fas fa-times-circle"></i> Not Available
+                        </span>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+    <!--==================== Contact Me ====================-->
+    <section class="contact section" id="contact-me">
+        <div class="container">
+            <!-- Improved section header with accent line -->
+            <div class="section-header">
+                <h2 class="section__title">Contact Me</h2>
+                <p class="section-description">
+                    Have a project in mind or want to collaborate? Feel free to reach out!
+                </p>
+            </div>
+            
+            <div class="horizontal-flex space-between">
+                <!-- Contact Info Cards with hover effects -->
+                <div class="vertical-flex contact-info-container">
+                    <!-- Email Card -->
+                    <div class="contact-card email-card">
+                        <div class="contact-icon-container">
+                            <i class="ri-mail-line"></i>
+                        </div>
+                        <div>
+                            <h3>Email</h3>
+                            <span>mohamed.Rashidwork2005@gmail.com</span>
+                            <div class="contact-link-container">
+                                <a href="mailto:mohamed.Rashidwork2005@gmail.com" class="contact-link">
+                                    Write to me <i class="ri-arrow-right-line"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- WhatsApp Card -->
+                    <div class="contact-card whatsapp-card">
+                        <div class="contact-icon-container whatsapp-icon">
+                            <i class="ri-whatsapp-line"></i>
+                        </div>
+                        <div>
+                            <h3>WhatsApp</h3>
+                            <span>+20 115-906-0999</span>
+                            <div class="contact-link-container">
+                                <a href="https://api.whatsapp.com/send?phone=201159060999&text=Hello, I'd like to discuss a project!" class="contact-link whatsapp-link">
+                                    Message me <i class="ri-arrow-right-line"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- LinkedIn Card -->
+                    <div class="contact-card linkedin-card">
+                        <div class="contact-icon-container linkedin-icon">
+                            <i class="ri-linkedin-box-line"></i>
+                        </div>
+                        <div>
+                            <h3>LinkedIn</h3>
+                            <span>mohamed-Rashid</span>
+                            <div class="contact-link-container">
+                                <a href="https://www.linkedin.com/in/mohamed-Rashid-ali/" class="contact-link linkedin-link">
+                                    Connect <i class="ri-arrow-right-line"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- GitHub Card -->
+                    <div class="contact-card github-card">
+                        <div class="contact-icon-container github-icon">
+                            <i class="ri-github-line"></i>
+                        </div>
+                        <div>
+                            <h3>GitHub</h3>
+                            <span>Muhammed-Rashid</span>
+                            <div class="contact-link-container">
+                                <a href="https://github.com/Muhammed-Rashid" class="contact-link github-link">
+                                    Connect <i class="ri-arrow-right-line"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!--==================== FOOTER ====================-->
+<footer class="footer">
+    <div class="footer__container container">
+        <div class="footer__social">
+            <a href="https://github.com/" target="_blank" class="footer__social-link">
+                <i class="ri-github-line"></i>
+            </a>
+            <a href="https://instagram.com/" target="_blank" class="footer__social-link">
+                <i class="ri-instagram-line"></i>
+            </a>
+            <a href="https://twitter.com/" target="_blank" class="footer__social-link">
+                <i class="ri-twitter-line"></i>
+            </a>
+        </div>
+
+        <span class="footer__copy">
+            © Mohamed Rashid. All rights reserved
+        </span>
+    </div>
+</footer>
+
+<!--=============== JS ===============-->
+<script src="{% static 'JS/filter.js' %}"></script>
+<script src="{% static 'JS/Light_Dark.js' %}"></script>
+</body>
+</html>
