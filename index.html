@@ -1,24 +1,27 @@
-{% load static %}
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
   <!--=============== REMIX ICONS ===============-->
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css" rel="stylesheet">
+  
+  <!--=============== BOXICONS ===============-->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  
+  <!--=============== FONTS ===============-->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!--=============== FONT AWESOME ===============-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
   <!--=============== CSS ===============-->
-  <link rel="stylesheet" href="../../static/CSS/styles.css">
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
 
   <title>Mohamed Rashid - Portfolio</title>
 </head>
-<body>
+<body class="light-mode">
 
 <!--==================== HEADER ====================-->
 <header class="header" id="header">
@@ -88,14 +91,14 @@
                 <!-- Right Side (Profile Image) -->
                 <div class="right-panel">
                     <div class="circle-container">
-                        <img src="/base/static/images/Portfolio.jpg" alt="Mohamed Rashid" />
+                        <img src="images/Portfolio.jpg" alt="Mohamed Rashid" />
                     </div>
                 </div>
             </div>
 
             <!-- Resume Button -->
-            <div class="resume-button" align= "center">
-                <a href="resume.docx" download>
+            <div class="resume-button" align="center">
+                <a href="files/resume.docx" download>
                     <button class="blue-button">
                         <span>Download Resume</span>
                     </button>
@@ -108,42 +111,63 @@
     <section class="technical-skill section" id="technical-skill">
         <div class="container">
             <!-- Section title -->
-            <h2 class="section__title">Technical skills</h2>
+            <h2 class="section__title">Technical Skills</h2>
             <div class="categories-grid">
                 <!-- Programming Languages -->
                 <div class="category-container">
                     <h3 class="category-title">Programming Languages</h3>
                     <div class="skills-grid">
-                        {% for technical in technicals %}
-                        {% if technical.category == 'programming' %}
                         <div class="skill-circle">
-                            {% if technical.image %}
-                            <img src="{{ technical.image.url }}" alt="{{ technical.title }}">
-                            {% else %}
-                            <div class="skill-text">{{ technical.title }}</div>
-                            {% endif %}
-                            <div class="tooltip">{{ technical.title }} - {{ technical.subtitle }}</div>
+                            <img src="images/skills/python.png" alt="Python">
+                            <div class="tooltip">Python - Programming Language</div>
                         </div>
-                        {% endif %}
-                        {% endfor %}
+                        <div class="skill-circle">
+                            <img src="images/skills/javascript.png" alt="JavaScript">
+                            <div class="tooltip">JavaScript - Programming Language</div>
+                        </div>
+                        <div class="skill-circle">
+                            <img src="images/skills/csharp.png" alt="C#">
+                            <div class="tooltip">C# - Programming Language</div>
+                        </div>
+                        <div class="skill-circle">
+                            <img src="images/skills/java.png" alt="Java">
+                            <div class="tooltip">Java - Programming Language</div>
+                        </div>
+                        <div class="skill-circle">
+                            <img src="images/skills/html.png" alt="HTML">
+                            <div class="tooltip">HTML - Markup Language</div>
+                        </div>
+                        <div class="skill-circle">
+                            <img src="images/skills/css.png" alt="CSS">
+                            <div class="tooltip">CSS - Styling Language</div>
+                        </div>
                     </div>
                 </div>
+
                 <!-- Frameworks and Libraries -->
                 <div class="category-container">
                     <h3 class="category-title">Frameworks & Libraries</h3>
                     <div class="skills-grid">
-                        {% for technical in technicals %}
-                        {% if technical.category == 'framework' %}
                         <div class="skill-circle">
-                            {% if technical.image %}
-                            <img src="{{ technical.image.url }}" alt="{{ technical.title }}">
-                            {% else %}
-                            <div class="skill-text">{{ technical.title }}</div>
-                            {% endif %}
-                            <div class="tooltip">{{ technical.title }} - {{ technical.subtitle }}</div>
+                            <img src="images/skills/django.png" alt="Django">
+                            <div class="tooltip">Django - Web Framework</div>
                         </div>
-                        {% endif %}
-                        {% endfor %}
+                        <div class="skill-circle">
+                            <img src="images/skills/react.png" alt="React">
+                            <div class="tooltip">React - Frontend Library</div>
+                        </div>
+                        <div class="skill-circle">
+                            <img src="images/skills/nodejs.png" alt="Node.js">
+                            <div class="tooltip">Node.js - Runtime Environment</div>
+                        </div>
+                        <div class="skill-circle">
+                            <img src="images/skills/bootstrap.png" alt="Bootstrap">
+                            <div class="tooltip">Bootstrap - CSS Framework</div>
+                        </div>
+                        <div class="skill-circle">
+                            <img src="images/skills/unity.png" alt="Unity">
+                            <div class="tooltip">Unity - Game Engine</div>
+                        </div>
                     </div>
                 </div>
 
@@ -151,18 +175,22 @@
                 <div class="category-container">
                     <h3 class="category-title">Databases</h3>
                     <div class="skills-grid">
-                        {% for technical in technicals %}
-                        {% if technical.category == 'database' %}
                         <div class="skill-circle">
-                            {% if technical.image %}
-                            <img src="{{ technical.image.url }}" alt="{{ technical.title }}">
-                            {% else %}
-                            <div class="skill-text">{{ technical.title }}</div>
-                            {% endif %}
-                            <div class="tooltip">{{ technical.title }} - {{ technical.subtitle }}</div>
+                            <img src="images/skills/mysql.png" alt="MySQL">
+                            <div class="tooltip">MySQL - Database</div>
                         </div>
-                        {% endif %}
-                        {% endfor %}
+                        <div class="skill-circle">
+                            <img src="images/skills/postgresql.png" alt="PostgreSQL">
+                            <div class="tooltip">PostgreSQL - Database</div>
+                        </div>
+                        <div class="skill-circle">
+                            <img src="images/skills/mongodb.png" alt="MongoDB">
+                            <div class="tooltip">MongoDB - NoSQL Database</div>
+                        </div>
+                        <div class="skill-circle">
+                            <img src="images/skills/sqlite.png" alt="SQLite">
+                            <div class="tooltip">SQLite - Lightweight Database</div>
+                        </div>
                     </div>
                 </div>
 
@@ -170,24 +198,31 @@
                 <div class="category-container">
                     <h3 class="category-title">Others</h3>
                     <div class="skills-grid">
-                        {% for technical in technicals %}
-                        {% if technical.category == 'other' %}
                         <div class="skill-circle">
-                            {% if technical.image %}
-                            <img src="{{ technical.image.url }}" alt="{{ technical.title }}">
-                            {% else %}
-                            <div class="skill-text">{{ technical.title }}</div>
-                            {% endif %}
-                            <div class="tooltip">{{ technical.title }} - {{ technical.subtitle }}</div>
+                            <img src="images/skills/git.png" alt="Git">
+                            <div class="tooltip">Git - Version Control</div>
                         </div>
-                        {% endif %}
-                        {% endfor %}
+                        <div class="skill-circle">
+                            <img src="images/skills/docker.png" alt="Docker">
+                            <div class="tooltip">Docker - Containerization</div>
+                        </div>
+                        <div class="skill-circle">
+                            <img src="images/skills/aws.png" alt="AWS">
+                            <div class="tooltip">AWS - Cloud Services</div>
+                        </div>
+                        <div class="skill-circle">
+                            <img src="images/skills/linux.png" alt="Linux">
+                            <div class="tooltip">Linux - Operating System</div>
+                        </div>
+                        <div class="skill-circle">
+                            <img src="images/skills/photoshop.png" alt="Photoshop">
+                            <div class="tooltip">Photoshop - Design Tool</div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
 
     <!--==================== Projects ====================-->
     <section class="projects section" id="projects">
@@ -226,56 +261,204 @@
             </div>
             <div id="clearFilter" class="clear-filter">Clear Filter</div>
 
-            {% for category, label in grouped_categories %}
-            <h3 class="project-group-title">{{ label }}</h3>
+            <!-- Web Projects -->
+            <h3 class="project-group-title">Web Development Projects</h3>
             <div class="projects__menu">
-                {% for project in projects %}
-                {% if project.category == category %}
-                <div class="project-card" data-title="{{ project.title|lower }}" data-status="{{ project.status }}" data-tech="{{ project.tech_stack|lower }}" data-category="{{ project.category }}">
+                <!-- Web Project 1 -->
+                <div class="project-card" data-title="e-commerce platform" data-status="finished" data-tech="django python javascript" data-category="web">
                     <div class="carousel-inner">
-                        <img src="{{ project.thumbnail.url }}" alt="Project Screenshot for {{ project.title }}" />
+                        <img src="images/projects/ecommerce-project.jpg" alt="E-commerce Platform" />
                     </div>
                     <div class="project-overlay">
                         <div class="project-header">
                             <div class="left">
-                                <h3>{{ project.title }}</h3>
-                                <p class="author">{{ project.subtitle }}</p>
-                                <h4>{{ project.tech_stack }}</h4>
+                                <h3>E-commerce Platform</h3>
+                                <p class="author">Full-Stack Web Application</p>
+                                <h4>Django, Python, JavaScript</h4>
                             </div>
                             <div class="right">
-                                <span class="status {{ project.status }}">{{ project.get_status_display }}</span>
-                                <span class="category">{{ project.get_category_display }}</span>
+                                <span class="status finished">Finished</span>
+                                <span class="category">Web</span>
                             </div>
                         </div>
                         <div class="project-actions" style="flex-direction: column; align-items: center;">
-                            {% if project.download_link %}
-                            <a href="{{ project.download_link.url }}" download class="action-button green-button">
-                                <i class="fas fa-download"></i> Download
-                            </a>
-                            {% endif %}
-                            {% if project.link_type == "github" and project.link_url %}
-                            <a href="{{ project.link_url }}" target="_blank" class="action-button gray-button">
+                            <a href="https://github.com/Muhammed-Rashid/ecommerce-project" target="_blank" class="action-button gray-button">
                                 <i class="fab fa-github"></i> View on GitHub
                             </a>
-                            {% elif project.link_type == "website" and project.link_url %}
-                            <a href="{{ project.link_url }}" target="_blank" class="action-button blue-button">
+                            <a href="https://your-ecommerce-demo.herokuapp.com" target="_blank" class="action-button blue-button">
                                 <i class="fas fa-globe"></i> Visit Website
                             </a>
-                            {% endif %}
-                            {% if not project.download_link and not project.link_url %}
-                            <span class="action-button red-button" style="pointer-events: none; opacity: 0.6;">
-                            <i class="fas fa-times-circle"></i> Not Available
-                        </span>
-                            {% endif %}
                         </div>
                     </div>
                 </div>
-                {% endif %}
-                {% endfor %}
+
+                <!-- Web Project 2 -->
+                <div class="project-card" data-title="portfolio website" data-status="finished" data-tech="html css javascript" data-category="web">
+                    <div class="carousel-inner">
+                        <img src="images/projects/portfolio-project.jpg" alt="Portfolio Website" />
+                    </div>
+                    <div class="project-overlay">
+                        <div class="project-header">
+                            <div class="left">
+                                <h3>Portfolio Website</h3>
+                                <p class="author">Responsive Personal Portfolio</p>
+                                <h4>HTML, CSS, JavaScript</h4>
+                            </div>
+                            <div class="right">
+                                <span class="status finished">Finished</span>
+                                <span class="category">Web</span>
+                            </div>
+                        </div>
+                        <div class="project-actions" style="flex-direction: column; align-items: center;">
+                            <a href="https://github.com/Muhammed-Rashid/portfolio" target="_blank" class="action-button gray-button">
+                                <i class="fab fa-github"></i> View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Web Project 3 -->
+                <div class="project-card" data-title="task management app" data-status="not_finished" data-tech="react nodejs mongodb" data-category="web">
+                    <div class="carousel-inner">
+                        <img src="images/projects/task-manager.jpg" alt="Task Management App" />
+                    </div>
+                    <div class="project-overlay">
+                        <div class="project-header">
+                            <div class="left">
+                                <h3>Task Management App</h3>
+                                <p class="author">MERN Stack Application</p>
+                                <h4>React, Node.js, MongoDB</h4>
+                            </div>
+                            <div class="right">
+                                <span class="status not_finished">In Progress</span>
+                                <span class="category">Web</span>
+                            </div>
+                        </div>
+                        <div class="project-actions" style="flex-direction: column; align-items: center;">
+                            <a href="https://github.com/Muhammed-Rashid/task-manager" target="_blank" class="action-button gray-button">
+                                <i class="fab fa-github"></i> View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            {% endfor %}
+
+            <!-- Software Projects -->
+            <h3 class="project-group-title">Software Development Projects</h3>
+            <div class="projects__menu">
+                <!-- Software Project 1 -->
+                <div class="project-card" data-title="inventory management system" data-status="finished" data-tech="python tkinter sqlite" data-category="software">
+                    <div class="carousel-inner">
+                        <img src="images/projects/inventory-system.jpg" alt="Inventory Management System" />
+                    </div>
+                    <div class="project-overlay">
+                        <div class="project-header">
+                            <div class="left">
+                                <h3>Inventory Management System</h3>
+                                <p class="author">Desktop Application</p>
+                                <h4>Python, Tkinter, SQLite</h4>
+                            </div>
+                            <div class="right">
+                                <span class="status finished">Finished</span>
+                                <span class="category">Software</span>
+                            </div>
+                        </div>
+                        <div class="project-actions" style="flex-direction: column; align-items: center;">
+                            <a href="files/inventory-system.zip" download class="action-button green-button">
+                                <i class="fas fa-download"></i> Download
+                            </a>
+                            <a href="https://github.com/Muhammed-Rashid/inventory-system" target="_blank" class="action-button gray-button">
+                                <i class="fab fa-github"></i> View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Software Project 2 -->
+                <div class="project-card" data-title="data analyzer tool" data-status="finished" data-tech="python pandas matplotlib" data-category="software">
+                    <div class="carousel-inner">
+                        <img src="images/projects/data-analyzer.jpg" alt="Data Analyzer Tool" />
+                    </div>
+                    <div class="project-overlay">
+                        <div class="project-header">
+                            <div class="left">
+                                <h3>Data Analyzer Tool</h3>
+                                <p class="author">Data Analysis Application</p>
+                                <h4>Python, Pandas, Matplotlib</h4>
+                            </div>
+                            <div class="right">
+                                <span class="status finished">Finished</span>
+                                <span class="category">Software</span>
+                            </div>
+                        </div>
+                        <div class="project-actions" style="flex-direction: column; align-items: center;">
+                            <a href="https://github.com/Muhammed-Rashid/data-analyzer" target="_blank" class="action-button gray-button">
+                                <i class="fab fa-github"></i> View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Game Projects -->
+            <h3 class="project-group-title">Game Development Projects</h3>
+            <div class="projects__menu">
+                <!-- Game Project 1 -->
+                <div class="project-card" data-title="2d platformer game" data-status="finished" data-tech="unity c#" data-category="game">
+                    <div class="carousel-inner">
+                        <img src="images/projects/platformer-game.jpg" alt="2D Platformer Game" />
+                    </div>
+                    <div class="project-overlay">
+                        <div class="project-header">
+                            <div class="left">
+                                <h3>2D Platformer Game</h3>
+                                <p class="author">Unity Game Project</p>
+                                <h4>Unity, C#</h4>
+                            </div>
+                            <div class="right">
+                                <span class="status finished">Finished</span>
+                                <span class="category">Game</span>
+                            </div>
+                        </div>
+                        <div class="project-actions" style="flex-direction: column; align-items: center;">
+                            <a href="files/platformer-game.zip" download class="action-button green-button">
+                                <i class="fas fa-download"></i> Download
+                            </a>
+                            <a href="https://github.com/Muhammed-Rashid/platformer-game" target="_blank" class="action-button gray-button">
+                                <i class="fab fa-github"></i> View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Game Project 2 -->
+                <div class="project-card" data-title="puzzle adventure" data-status="not_finished" data-tech="unity c#" data-category="game">
+                    <div class="carousel-inner">
+                        <img src="images/projects/puzzle-adventure.jpg" alt="Puzzle Adventure Game" />
+                    </div>
+                    <div class="project-overlay">
+                        <div class="project-header">
+                            <div class="left">
+                                <h3>Puzzle Adventure</h3>
+                                <p class="author">3D Adventure Game</p>
+                                <h4>Unity, C#</h4>
+                            </div>
+                            <div class="right">
+                                <span class="status not_finished">In Progress</span>
+                                <span class="category">Game</span>
+                            </div>
+                        </div>
+                        <div class="project-actions" style="flex-direction: column; align-items: center;">
+                            <a href="https://github.com/Muhammed-Rashid/puzzle-adventure" target="_blank" class="action-button gray-button">
+                                <i class="fab fa-github"></i> View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
+
     <!--==================== Contact Me ====================-->
     <section class="contact section" id="contact-me">
         <div class="container">
@@ -363,7 +546,7 @@
 <footer class="footer">
     <div class="footer__container container">
         <div class="footer__social">
-            <a href="https://github.com/" target="_blank" class="footer__social-link">
+            <a href="https://github.com/Muhammed-Rashid" target="_blank" class="footer__social-link">
                 <i class="ri-github-line"></i>
             </a>
             <a href="https://instagram.com/" target="_blank" class="footer__social-link">
@@ -381,7 +564,7 @@
 </footer>
 
 <!--=============== JS ===============-->
-<script src="{% static 'JS/filter.js' %}"></script>
-<script src="{% static 'JS/Light_Dark.js' %}"></script>
+<script src="js/filter.js"></script>
+<script src="js/Light_Dark.js"></script>
 </body>
 </html>
