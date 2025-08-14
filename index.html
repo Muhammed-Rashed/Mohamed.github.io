@@ -591,18 +591,28 @@
     </section>
 </main>
 
+<!--==================== Testimony ====================-->
+<footer class="test">
+    <div class="test__container container">
+        <div class="contact-card test-card">
+            <div class="contact-icon-container test-icon">
+                <img src="images/customer_1.webp" alt="Customer 1">
+            </div>
+            <div>
+                <h3>Customer 1</h3>
+                <h4>He did a good job :)</h4>
+                <h5>Rating: 4.5/5</h5>
+            </div>
+        </div>
+    </div>
+</footer>
+
 <!--==================== FOOTER ====================-->
 <footer class="footer">
     <div class="footer__container container">
         <div class="footer__social">
             <a href="https://github.com/Muhammed-Rashid" target="_blank" class="footer__social-link">
                 <i class="ri-github-line"></i>
-            </a>
-            <a href="https://instagram.com/" target="_blank" class="footer__social-link">
-                <i class="ri-instagram-line"></i>
-            </a>
-            <a href="https://twitter.com/" target="_blank" class="footer__social-link">
-                <i class="ri-twitter-line"></i>
             </a>
         </div>
 
@@ -612,8 +622,21 @@
     </div>
 </footer>
 
+
+<div id="projectModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 id="modalTitle"></h2>
+        <p id="modalDescription"></p>
+        <p><strong>Status:</strong> <span id="modalStatus"></span></p>
+        <p><strong>Category:</strong> <span id="modalCategory"></span></p>
+        <p><strong>Tech Stack:</strong> <span id="modalTech"></span></p>
+        <div id="modalLinks"></div>
+    </div>
+</div>
 <!--=============== JS ===============-->
 <script src="JS/filter.js"></script>
+<script src = "JS/modal.js"></script>
 <script src="JS/Light_Dark.js"></script>
 </body>
 </html>
