@@ -108,6 +108,75 @@
     </section>
 
     <!--==================== Technical ====================-->
+    <section class="education section" id="education">
+        <div class="container">
+            <h2 class="section__title">Education</h2>
+            
+            <div class="education-timeline">
+                <!-- Education Item 1 -->
+                <div class="education-item">
+                    <div class="education-content">
+                        <div class="education-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="education-degree">Bachelor's Degree in Computer Science</div>
+                        <div class="education-school">Cairo University</div>
+                        <div class="education-period">2023 - 2027 expected</div>
+                        <div class="education-description">
+                            Comprehensive study of computer science fundamentals including algorithms, data structures, 
+                            software engineering, and system design. Focused on web development and software architecture.
+                        </div>
+                        <div class="education-details">
+                            <span class="education-tag">Computer Science</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education Item 2 -->
+                <div class="education-item">
+                    <div class="education-content">
+                        <div class="education-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div class="education-degree">Full-Stack Web Development Bootcamp</div>
+                        <div class="education-school">NTI</div>
+                        <div class="education-period">2025</div>
+                        <div class="education-description">
+                            Intensive bootcamp covering modern web development technologies including Angular, Node.js, 
+                            MongoDB, and express. Completed multiple real-world projects.
+                        </div>
+                        <div class="education-details">
+                            <span class="education-tag">React</span>
+                            <span class="education-tag">Node.js</span>
+                            <span class="education-tag">MongoDB</span>
+                            <span class="education-tag">Express.js</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education Item 3 -->
+                <div class="education-item">
+                    <div class="education-content">
+                        <div class="education-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div class="education-degree"></div>
+                        <div class="education-school">Data Camp</div>
+                        <div class="education-period">2024-2025</div>
+                        <div class="education-description">
+                            Learned the basics of SQL, Data Analysis and ML.
+                        </div>
+                        <div class="education-details">
+                            <span class="education-tag">SQL</span>
+                            <span class="education-tag">ML</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--==================== Technical ====================-->
     <section class="technical-skill section" id="technical-skill">
         <div class="container">
             <!-- Section title -->
@@ -254,37 +323,6 @@
             <!-- Section title -->
             <h2 class="section__title">My Best Projects</h2>
 
-            <!-- Search & Filter -->
-            <div class="box">
-                <i class='bx bx-search'></i>
-                <input type="text" id="searchInput" placeholder="Search">
-                <div class="filter">
-                    <i id="filterIcon" class="ri-filter-3-line"></i>
-                    <div id="filterMenu" class="filter-menu" style="display: none;">
-                        <div data-filter-type="category">Category</div>
-                        <div data-filter-type="status">Status</div>
-                        <div data-filter-type="tech">Tech Stack</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Filter Popup -->
-            <div id="filterPopup" class="popup" style="display: none;">
-                <span id="closePopup">&times;</span>
-                <label id="filterLabel"></label>
-                <input type="text" id="popupInput" style="display:none;">
-                <select id="popupSelect" style="display:none;">
-                    <option value="">--Select--</option>
-                    <option value="software">Software</option>
-                    <option value="web">Web</option>
-                    <option value="game">Game</option>
-                    <option value="finished">Finished</option>
-                    <option value="not_finished">Not Finished</option>
-                </select>
-                <button id="applyFilter">Apply</button>
-            </div>
-            <div id="clearFilter" class="clear-filter">Clear Filter</div>
-
             <!-- Web Projects -->
             <h3 class="project-group-title">Web Development Projects</h3>
             <div class="projects__menu">
@@ -305,9 +343,9 @@
                                 <span class="category">Web</span>
                             </div>
                         </div>
-                        <div class="project-actions" style="flex-direction: column; align-items: center;">
+                        <div class="project-actions">
                             <a href="https://github.com/Muhammed-Rashed/Ecommerce" target="_blank" class="action-button gray-button">
-                                <i class="fab fa-github"></i> View on GitHub
+                                <i class="fab fa-github"></i> GitHub
                             </a>
                         </div>
                     </div>
@@ -330,14 +368,15 @@
                                 <span class="category">Web</span>
                             </div>
                         </div>
-                        <div class="project-actions" style="flex-direction: column; align-items: center;">
-                            <span class="action-button gray-button" style="cursor: default; pointer-events: none; opacity: 0.7;">
-                              <i class="fas fa-lock"></i> Private Repo
-                            </span>
+                        <div class="project-actions">
+                            <a href="https://github.com/iAhmedAyman/Library-Website" target="_blank" class="action-button gray-button">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
                         </div>
                     </div>
                 </div>  
             </div>   
+            
             <!-- Software Projects -->
             <h3 class="project-group-title">Software Development Projects</h3>
             <div class="projects__menu">
@@ -349,7 +388,7 @@
                     <div class="project-overlay">
                         <div class="project-header">
                             <div class="left">
-                                <h3>pharmacy POS system</h3>
+                                <h3>Pharmacy POS System</h3>
                                 <p class="author">Software tool</p>
                                 <h4>Flutter, Dart, SQLite, FireBase</h4>
                             </div>
@@ -358,13 +397,14 @@
                                 <span class="category">Software</span>
                             </div>
                         </div>
-                        <div class="project-actions" style="flex-direction: column; align-items: center;">
+                        <div class="project-actions">
                             <a href="https://github.com/Muhammed-Rashed/POS-pharmacy-app" target="_blank" class="action-button gray-button">
-                                <i class="fab fa-github"></i> View on GitHub
+                                <i class="fab fa-github"></i> GitHub
                             </a>
                         </div>
                     </div>
                 </div>
+                
                 <!-- Software Project 2 -->
                 <div class="project-card" data-title="College management system" data-status="finished" data-tech="Python Tkinter SQLite" data-category="software">
                     <div class="carousel-inner">
@@ -382,9 +422,9 @@
                                 <span class="category">Software</span>
                             </div>
                         </div>
-                        <div class="project-actions" style="flex-direction: column; align-items: center;">
+                        <div class="project-actions">
                             <span class="action-button gray-button" style="cursor: default; pointer-events: none; opacity: 0.7;">
-                              <i class="fas fa-lock"></i> Private Repo
+                              <i class="fas fa-lock"></i> Private
                             </span>
                         </div>
                     </div>
@@ -393,7 +433,7 @@
                 <!-- Software Project 3 -->
                 <div class="project-card" data-title="image editor" data-status="finished" data-tech="C++ Qt" data-category="software">
                     <div class="carousel-inner">
-                        <img src="images/projects/Project1a_AkLlleb_ciD2Bdw.png" alt="Image Editor" />
+                        <img src="images/projects/Project1a_AkLlleb.png" alt="Image Editor" />
                     </div>
                     <div class="project-overlay">
                         <div class="project-header">
@@ -407,8 +447,8 @@
                                 <span class="category">Software</span>
                             </div>
                         </div>
-                        <div class="project-actions" style="flex-direction: column; align-items: center;">
-                            <a href="Projects_Files/GamaGlam.zip" download class="action-button green-button">
+                        <div class="project-actions">
+                            <a href="Projects_Files/GamaGlam.zip" class="action-button green-button">
                                 <i class="fas fa-download"></i> Download
                             </a>
                         </div>
@@ -432,8 +472,8 @@
                                 <span class="category">Software</span>
                             </div>
                         </div>
-                        <div class="project-actions" style="flex-direction: column; align-items: center;">
-                            <a href="Projects_Files/VoleMachine.zip" download class="action-button green-button">
+                        <div class="project-actions">
+                            <a href="Projects_Files/VoleMachine.zip" class="action-button green-button">
                                 <i class="fas fa-download"></i> Download
                             </a>
                         </div>
@@ -457,9 +497,9 @@
                                 <span class="category">Software</span>
                             </div>
                         </div>
-                        <div class="project-actions" style="flex-direction: column; align-items: center;">
+                        <div class="project-actions">
                             <span class="action-button gray-button" style="cursor: default; pointer-events: none; opacity: 0.7;">
-                              <i class="fas fa-lock"></i> Private Repo
+                              <i class="fas fa-lock"></i> Private
                             </span>
                         </div>
                     </div>
